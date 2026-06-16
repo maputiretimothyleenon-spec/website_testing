@@ -1,0 +1,334 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+body{
+    background-color: black;
+    background:  radial-gradient(circle at top, #1a1a1a, #0B0B0B 70%);
+    color: #F5F1E8;
+    height: 100hv;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.container{
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+}
+h1{
+    font-size: 3rem;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+p{
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 600px;
+    line-height: 0.8;
+    opacity: 0..85;
+}
+button{
+    background-color: #D4AF37;
+    color: black;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 3s;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: linear-gradient(135deg, #d4AF37, #b8860b);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0, 4);
+}
+section{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 1s ease forwards;
+}
+@keyframes fadeIn{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#the-plan{
+    background-color: #111111;
+}
+#the-plan h2{
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+#the-plan p{
+    max-width: 700px;
+    line-height: 1.8;
+}
+#landing{
+    animation-delay: 0s;
+}
+#the-plan{
+    animation-delay: 0.3s;
+}
+#our-beginning{
+    animation-delay: 0.6s;
+}
+.timeline{
+    margin: 20px 0;
+    font-size: 1.2rem;
+    opacity:0.8;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.event{
+    padding: 20px;
+    border-left: 3px solid gold;
+    background: rgba(255, 255, 255, 0.03);
+    width: 500px;
+    text-align: left;
+}
+.hidden{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 2s ease;
+}
+.show{
+    opacity: 1;
+    transform: translateY(1);
+
+}
+.memory-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+    width: 300px;
+    padding: 25px;
+    border-radius: 15px;
+    background: rgba(255,255, 255, 0.04);
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
+}
+.memory-card{
+    width: 300px;
+    padding: 25px;
+    border-radius: 15px;
+    background: rgba(255,255, 255, 0.04);
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
+}
+.memory-card:hover{
+    transform: translateY(-10px);
+}
+#statement {
+    font-size: larger;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 50px;
+    gap: 1px;
+    border-left: 3px solid gold;
+    text-align: left;
+    word-spacing: 5px;
+    
+    
+}
+.hidden-memory{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 2s ease;
+    margin-top: 30px;
+}
+.hidden-memory.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+.hidden-memory img{
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    transition: 1s ease;
+}
+.hidden-memory img,
+.hidden-memory p{
+    opacity: 0px;
+    transform: translateY(20px);
+    transition: 1s ease;
+}
+.hidden-memory.show img{
+    opacity: 0px;
+    transform: translateY(0);
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.5);
+}
+.hidden-memory.show p{
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 2s;
+}
+body.memory-open{
+    background: radial-gradient(circle at center, #1a1a1a, #000000 80% );
+    transition: 1s ease;
+}
+#blueprint{
+    margin-top:40px;
+}
+
+.dream-card{
+    opacity:0;
+    transform:translateY(30px);
+
+    transition:0.8s ease;
+
+    margin:20px auto;
+
+    max-width:500px;
+
+    padding:20px;
+
+    background:rgba(255,255,255,0.05);
+
+    border-left:3px solid #D4AF37;
+
+    border-radius:10px;
+}
+
+.dream-card.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+#blueprint-ending{
+    opacity:0;
+
+    transition:1s ease;
+
+    margin-top:40px;
+
+    font-style:italic;
+}
+
+#blueprint-ending.show{
+    opacity:1;
+}
+/* #path-container{
+    margin-top:40px;
+    position:relative;
+}
+
+.path{
+    opacity:0;
+    transition:2s ease;
+    font-size:1.5rem;
+    margin:10px; 
+}*/
+
+
+.center{
+    opacity:1;
+    color:gold;
+}
+
+/* .left, .right{
+    position:absolute;
+    top:40px;
+    width:100px;
+}
+
+.left{
+    left:40%;
+    transform:translateX(-50%);
+}
+
+.right{
+    right:40%;
+    transform:translateX(50%);
+}
+
+#path-container.active .left{
+    transform:translateX(-150px);
+    opacity:0.6;
+}
+
+#path-container.active .right{
+    transform:translateX(150px);
+    opacity:0.6;
+} */
+
+/* #detour-message{
+    margin-top:80px;
+    opacity:0;
+    transition:1s ease;
+}
+
+#path-container.active #detour-message{
+    opacity:1;
+} */
+
+.detour-path{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.path-btn{
+    padding-right: 15px 25px;
+    border: none;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.path-btn:hover{
+    transform: scale(1.05);
+}
+.message-box{
+    margin: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1s ease;
+    max-width: 500px;
+    font-size: medium;
+    border-left:3px solid #D4AF37;
+}
+.message-box.show{
+    opacity: 1;
+    transform: translateY(0);
+    display: block;
+}
+.hidden-choice{
+    opacity:0;
+    transform:translateY(20px);
+    transition:1s ease;
+    margin-top:30px;
+    font-size:1.5rem;
+    font-weight:bold;
+}
+
+.hidden-choice.show{
+    opacity:1;
+    transform:translateY(0);
+}
+#the-future{
+    text-align:center;
+    margin-top:60px;
+}
+
+.future-intro{
+    max-width:600px;
+    margin:auto;
+    opacity:0.8;
+}
+
+#future-message{
+    margin-top:30px;
+}
